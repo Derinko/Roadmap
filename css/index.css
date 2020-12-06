@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+
+:root {
+    --Gradient: linear-gradient(90deg, rgba(45, 40, 62, 1) 35%, rgba(128, 43, 177, 1) 100%);
+    --Bg: #2d283e;
+    --Text: #802bb1;
+    --SecondaryText: #d1d7e0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--Bg);
+}
+
+main {
+    font-family: 'JetBrains Mono', monospace;
+    display: grid;
+    grid-template-rows: 35% 60% 5%;
+    background: var(--Bg);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    height: 4px;
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: var(--Text);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb:horizontal {
+    background-color: var(--Bg);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #2d283e;
+    /* creates padding around scroll thumb */
+}
+body::-webkit-scrollbar:vertical {
+    display: none;
+  }
+
+.info {
+    grid-row: 1/1;
+}
+
+.cont {
+    grid-row: 2/2;
+    padding-left: 5%;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+h1 {
+    color: var(--Text);
+    margin: 0;
+    padding: 0;
+    font-size: 5em;
+}
+
+p {
+    color: var(--SecondaryText);
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+h6 {
+    grid-row: 3/3;
+    color: var(--SecondaryText);
+}
+
+hr {
+    margin: 0;
+    background: var(--SecondaryText);
+    width: 10rem;
+    height: 1rem;
+}
+
+.button {
+    display: INLINE-block;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 0.4s;
+    background-color: var(--Bg);
+    border-radius: 12px;
+    border: 1px solid #802bb1;
+    height: 6rem;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+    color: var(--SecondaryText);
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background: var(--Gradient);
+}
+
+.arrow {
+    background: var(--SecondaryText);
+    width: 10rem;
+    height: 10px;
+}
