@@ -28,12 +28,13 @@ body::-webkit-scrollbar {
     width: 12px;
     /* width of the entire scrollbar */
 }
+
 body::-webkit-scrollbar-track {
     background: var(--Text);
     /* color of the tracking area */
 }
 
-body::-webkit-scrollbar-thumb:horizontal {
+.middle::-webkit-scrollbar-thumb:horizontal {
     background-color: var(--Bg);
     /* color of the scroll thumb */
     border-radius: 20px;
@@ -41,22 +42,34 @@ body::-webkit-scrollbar-thumb:horizontal {
     border: 3px solid #2d283e;
     /* creates padding around scroll thumb */
 }
+
 body::-webkit-scrollbar:vertical {
     display: none;
-  }
+}
 
 .info {
     grid-row: 1/1;
 }
 
+/*Roadmap container*/
 .cont {
     grid-row: 2/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     padding-left: 5%;
+
+}
+.top{
+    grid-row: 1/1;
+}
+.middle {
+    grid-row: 2/2;
     display: inline-flex;
     align-items: center;
     flex-direction: row;
     overflow: auto;
     white-space: nowrap;
+
 }
 
 h1 {
@@ -108,4 +121,7 @@ hr {
     background: var(--SecondaryText);
     width: 10rem;
     height: 10px;
+}
+.bottom{
+    grid-row: 3/3;
 }
